@@ -1,7 +1,7 @@
 import './style.css';
-import createHome from './home';
-import createMenu from './menu';
-import createContact from './contact';
+import loadHome from './home';
+import loadMenu from './menu';
+import loadContact from './contact';
 
 function setActiveButton(button) {
     const buttons = document.querySelectorAll('.nav-btn');
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactBtn = document.getElementById('contact-btn');
 
     // Initial load
-    loadPage(createHome, homeBtn);
+    loadPage(loadHome, homeBtn);
 
     // Event listeners
-    homeBtn.addEventListener('click', () => loadPage(createHome, homeBtn));
-    menuBtn.addEventListener('click', () => loadPage(createMenu, menuBtn));
-    contactBtn.addEventListener('click', () => loadPage(createContact, contactBtn));
+    homeBtn.addEventListener('click', () => loadPage(loadHome, homeBtn));
+    menuBtn.addEventListener('click', () => loadPage(loadMenu, menuBtn));
+    contactBtn.addEventListener('click', () => loadPage(loadContact, contactBtn));
 }); 
